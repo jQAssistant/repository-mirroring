@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # See https://stackoverflow.com/questions/59895/
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
