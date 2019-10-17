@@ -1,15 +1,19 @@
 # See https://stackoverflow.com/questions/59895/
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+source ${script_dir}/includes/colors.sh
+
 wd=/tmp/jqa-update-$(date -u +"%Y-%m-%d-%H-%M-%S%-Z")
 mkdir -p ${wd}
+
+echo "${GREEN}Working dir will be ${wd}${RESET}"
 
 for r in $(cat ${script_dir}/repositories.dat);
 do
     p=${wd}/$(echo $r | cut -f 2 -d '/' | sed -e 's/.git//g')
     m=$(echo $r | sed -e 's/jqara/buschmais/g')
 
-    echo $m
+    echo "${GREEN}Mirroring $m to $r${RESET}"
     git clone $r $p
     cd $p
 

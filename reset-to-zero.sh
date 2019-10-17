@@ -2,8 +2,12 @@
 # See https://stackoverflow.com/questions/59895/
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
+source ${script_dir}/includes/colors.sh
 
 wd=/tmp/jqa-reset-$(date -u +"%Y-%m-%d-%H-%M-%S%-Z")
+
+echo "${GREEN}Working directory will be ${wd}${RESET}"
+echo "${GREEN}Resetting mirrored repositories to tag ZERO${RESET}"
 
 for r in $(cat ${script_dir}/repositories.dat);
 do
