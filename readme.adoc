@@ -1,0 +1,24 @@
+= Mirroring Scripts for the jQA Repositories
+
+This repository contains some small scripts to mirror a set of jQAssistant
+repositories into other Git repositories in the
+https://github.com/jqara[Github organisation jqara^]. These repositories are
+used among other things for testing our release tooling.
+
+== Usage Hints
+
+Before a repository can be mirrored for the first time, the target
+repository must be created manually.
+
+=== Available Scripts
+
+
+|===
+| Script | Purpose
+| `clone-them-all.sh` | Clones all repositories into the current directory
+| `reset-to-zero.sh`  | Resets all mirrored repositories to their state
+                        after mirroring. This state has been tag with the
+                        tag `ZERO.
+| `undo-changes.sh`   | Discards all non-commited local changes.
+| `update.sh`         | Updates the mirror repositories.
+|===
