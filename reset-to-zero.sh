@@ -1,6 +1,6 @@
 wd=/tmp/jqa-reset-$(date -u +"%Y-%m-%d-%H-%M-%S%-Z")
 
-for r in $(cat /Users/plexus/jqara/jqara-skripte/repositories.dat);
+for r in $(cat ~/jqara/jqara-skripte/repositories.dat);
 do
 	p=${wd}/$(echo $r | cut -f 2 -d '/' | sed -e 's/.git//g')
 	git clone $r $p
