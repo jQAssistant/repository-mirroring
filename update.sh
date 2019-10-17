@@ -11,7 +11,7 @@ echo "${GREEN}Working dir will be ${wd}${RESET}"
 for r in $(cat ${script_dir}/repositories.dat);
 do
     p=${wd}/$(echo $r | cut -f 2 -d '/' | sed -e 's/.git//g')
-    m=$(echo $r | sed -e 's/jqara/buschmais/g')
+    m=$(echo $r | sed -e 's/jqara/jqassistant/g')
 
     echo "${GREEN}Mirroring $m to $r${RESET}"
     git clone $r $p
@@ -30,9 +30,8 @@ do
     git push --delete origin ZERO
     git reset --hard buschmais/master
     git tag IMPORT
-    sed -i.backup -e "s/github.com:buschmais\//github.com:jqara\//g" pom.xml
-    sed -i.backup -e "s/github.com:buschmais\//github.com:jqara\//g" pom.xml
-    git commit -a -m "Umsetzung von buschmais auf jqara"
+    sed -i.backup -e "s/github.com:jqassistant\//github.com:jqara\//g" pom.xml
+    git commit -a -m "Umsetzung von jqassistant auf jqara"
     git tag ZERO
     git push --tags --force -u origin master
     
