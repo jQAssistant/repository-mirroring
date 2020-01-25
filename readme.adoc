@@ -20,5 +20,5 @@ repository must be created manually.
                         after mirroring. This state has been tag with the
                         tag `ZERO.
 | `undo-changes.sh`   | Discards all non-commited local changes.
-| `update.sh`         | Updates the mirror repositories.
+| `mirror.sh`         | Updates the mirror repositories.
 |===
