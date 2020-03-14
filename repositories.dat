@@ -25,6 +25,7 @@ git@github.com:jqara/jqa-osgi-plugin.git
 git@github.com:jqara/jqa-ejb3-plugin.git
 git@github.com:jqara/jqa-m2repo-plugin.git
 git@github.com:jqara/jqa-graphml-plugin.git
+git@github.com:jqara/jqa-graphql-plugin.git
 git@github.com:jqara/jqa-jpa2-plugin.git
 git@github.com:jqara/jqa-spring-plugin.git
 git@github.com:jqara/jqa-javaee6-plugin.git
